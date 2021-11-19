@@ -1,0 +1,16 @@
+// Colors
+
+body {
+}
+
+// Pixel to rem
+@function rem($pixels, $context: 16) {
+  @return #{$pixels/$context}rem;
+}
+
+// Flex center
+@mixin flex-center {
+  display: flex;
+  place-content: center;
+  flex-direction: column;
+}

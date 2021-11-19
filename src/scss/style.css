@@ -1,0 +1,308 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: 100%;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  font-size: 16px;
+}
+
+.logo-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3.5rem 1.5rem;
+}
+
+.logo {
+  height: 2rem;
+}
+
+.hero-img {
+  background-image: url("./../images/bg-pattern-intro.svg"), linear-gradient(135deg, #ff8f70 17%, #ff3d54 75%);
+  background-repeat: no-repeat;
+  background-position: 35% 30%;
+  background-size: 400%;
+  height: 37.5rem;
+  border-bottom-left-radius: 6.25rem;
+  position: relative;
+}
+
+.hero-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  flex-direction: column;
+  padding-top: 3.25rem;
+}
+
+.hero-text {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 2.25rem;
+  line-height: 3.4375rem;
+  font-weight: 600;
+  color: white;
+}
+
+.hero-content {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 300;
+  color: white;
+}
+
+.cta-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.cta-start {
+  width: 8.5625rem;
+  height: 3rem;
+  border-radius: 1.5625rem;
+  font-family: 'Ubuntu', sans-serif;
+  color: #ff525d;
+  background-color: white;
+  font-weight: bold;
+  border: none;
+  background-color: white;
+  color: #ff525d;
+}
+
+.cta-learn {
+  width: 8.5625rem;
+  height: 3rem;
+  border-radius: 1.5625rem;
+  font-family: 'Ubuntu', sans-serif;
+  color: #ff525d;
+  background-color: white;
+  font-weight: bold;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+}
+
+.intro-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.intro-title, .intro-title-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  flex-direction: column;
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: #1f3f5b;
+  margin-bottom: 1rem;
+}
+
+.intro-title-head {
+  margin-top: 6.25rem;
+}
+
+.intro-content {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  font-weight: 300;
+  color: #4b5862;
+}
+
+.intro-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  flex-direction: column;
+  margin-bottom: 2.5rem;
+}
+
+.intro-img {
+  margin: 1.375rem auto 2.875rem auto;
+}
+
+.state-bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+}
+
+.state-circle {
+  background-image: url("../images/bg-pattern-circles.svg");
+  background-repeat: no-repeat;
+  height: 25rem;
+  width: 37.75rem;
+  background-size: 100%;
+  background-position: top -14.0625rem left -1.5625rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.state-grad {
+  background-image: linear-gradient(135deg, #2c2d3f 0%, #3f4164 100%);
+  height: 39.0625rem;
+  overflow: hidden;
+  border-bottom-left-radius: 6.25rem;
+  border-top-right-radius: 6.25rem;
+}
+
+.state-phones {
+  background-image: url("../images/illustration-phones.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 21.6875rem;
+  max-width: 20.5rem;
+  height: 21.6875rem;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: 320px) {
+  .state-circle {
+    background-position: top -14.0625rem left -8.4375rem;
+  }
+}
+
+@media (min-width: 375px) {
+  .state-circle {
+    background-position: top -14.0625rem left -7.1875rem;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 550px) {
+  .state-circle {
+    background-position: top -14.0625rem left -5.9375rem;
+  }
+}
+
+@media (min-width: 551px) {
+  .state-circle {
+    background-position: top -14.0625rem left 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
