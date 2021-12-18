@@ -4,3 +4,8 @@
   font-weight: $weight;
   color: $color;
 }
+
+// Pixel to rem
+@function rem($pixels, $context: 16) {
+  @return #{$pixels/$context}rem;
+}

@@ -1,0 +1,296 @@
+// Navbar
+.nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: rem(32) rem(24);
+  position: relative;
+  align-items: center;
+  @include responsive(min-desktop) {
+    padding: rem(34) rem(44);
+  }
+  &-hamburger {
+    height: rem(18);
+    @include responsive(min-desktop) {
+      display: none;
+    }
+    &[data-active='true'] {
+      opacity: 0.6;
+    }
+  }
+
+  &-logo {
+    max-height: rem(33);
+    width: rem(170);
+  }
+
+  &-menu[data-visible='false'] {
+    opacity: 0;
+    visibility: hidden;
+    @include responsive(min-desktop) {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &-menu {
+    transition: opacity 0.1s, visibility, 0.1s ease-out;
+    position: absolute;
+    top: rem(78);
+    left: rem(24);
+    right: rem(24);
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &::before {
+      content: '';
+      position: absolute;
+      background: $white;
+      transform: skewY(-45deg);
+      height: rem(40);
+      width: rem(50);
+      top: 0;
+      right: 0;
+    }
+
+    @include responsive(min-desktop) {
+      position: relative;
+      flex-direction: row;
+      background-color: transparent;
+      inset: 0 0 0 0;
+      margin: 0;
+      gap: rem(47);
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  &-item {
+    text-align: center;
+    padding: rem(16) 0;
+    &:first-child {
+      padding-top: rem(39);
+    }
+    @include responsive(min-desktop) {
+      padding: 0;
+      &:first-child {
+        padding: 0;
+      }
+    }
+    & a {
+      text-decoration: none;
+      @include font(20, 25, 600, $gray-blue);
+      @include responsive(min-desktop) {
+        @include font(18, 25, 600, $white);
+      }
+    }
+  }
+  &-btn {
+    width: rem(140);
+    height: rem(56);
+    border-radius: rem(50);
+    border: none;
+    background-color: $yellow;
+    @include font(15, 25, bold);
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    margin: rem(16) 0 rem(39) 0;
+    @include responsive(min-desktop) {
+      margin: 0;
+      background-color: rgba(255, 255, 255, 0.25);
+      color: $white;
+    }
+  }
+}
+
+// Header
+.header {
+  &-title {
+    font-family: 'Fraunces', serif;
+    @include font(40, 49, 900, $white);
+    text-align: center;
+    text-transform: uppercase;
+    padding: rem(144) rem(24) rem(52) rem(24);
+    letter-spacing: rem(6.25);
+    @include responsive(xs-mobile) {
+      font-size: rem(30);
+    }
+  }
+  &-arrow {
+    display: flex;
+    place-content: center;
+    width: 100%;
+  }
+
+  &-image {
+    background-image: url('../images/desktop/image-header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+  }
+}
+.arrow {
+  width: rem(30);
+  height: rem(107);
+}
+
+// Section 1
+.section1 {
+  padding: rem(64) rem(24);
+  &-img {
+    object-position: center center;
+    object-fit: cover;
+    width: 100%;
+  }
+  &-title {
+    font-family: 'Fraunces', serif;
+    @include font(32, 39, 900, $very-dark-blue);
+    text-align: center;
+    margin-bottom: rem(24);
+  }
+  &-content {
+    @include font(18, 30, 600, $gray-blue);
+    text-align: center;
+    margin-bottom: rem(32);
+  }
+  &-learn {
+    font-family: 'Fraunces', serif;
+    @include font(15, 25, 900, $very-dark-blue);
+    letter-spacing: rem(1);
+    text-transform: uppercase;
+    text-decoration: none;
+    &::after {
+      content: '';
+      width: rem(137);
+      height: rem(10);
+      background: $yellow;
+      opacity: 0.25;
+      border-radius: rem(28);
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      margin-top: rem(17);
+      z-index: -1;
+    }
+  }
+  .red {
+    &::after {
+      background: $soft-red;
+    }
+  }
+  .link-container {
+    text-align: center;
+  }
+}
+
+// Design & photography section
+.section2 {
+  text-align: center;
+  padding: rem(398) rem(24) rem(59) rem(24);
+  height: rem(600);
+  &-img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: rem(600);
+    object-position: center center;
+    object-fit: cover;
+  }
+  &-title {
+    font-family: 'Fraunces', serif;
+    @include font(28, 35, 900, $dark-blue);
+    margin-bottom: rem(27);
+  }
+  &-content {
+    @include font(16, 27, 600, $dark-blue);
+    letter-spacing: rem(-0.114286);
+  }
+}
+
+// Testimonials
+.testimonial {
+  padding: rem(64) rem(24) rem(86) rem(24);
+  text-align: center;
+  &-section {
+    margin: rem(64) 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &-title {
+    font-family: 'Fraunces', serif;
+    @include font(16, 20, 900, $light-gray-blue);
+    letter-spacing: rem(4);
+    text-transform: uppercase;
+  }
+  &-img {
+    width: rem(72);
+    height: rem(72);
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto rem(32) auto;
+  }
+  &-content {
+    @include font(18, 32, 600, $dark-gray-blue);
+    letter-spacing: rem(-0.128571);
+  }
+  &-name {
+    font-family: 'Fraunces', serif;
+    @include font(18, 22, 900, $very-dark-blue);
+    letter-spacing: rem(-0.128571);
+    margin: rem(32) 0 rem(9) 0;
+  }
+  &-position {
+    @include font(14, 25, 600, $light-gray-blue);
+    letter-spacing: rem(-0.1);
+  }
+}
+
+// Gallary
+.gallary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  & > img {
+    aspect-ratio: 1;
+  }
+}
+
+// Footer
+.footer {
+  padding: rem(64) rem(39) rem(80) rem(39);
+  background-color: #90d4c6;
+  &-logo {
+    height: rem(33);
+    width: rem(170);
+    margin-bottom: rem(40);
+    display: block;
+    margin: 0 auto;
+    filter: invert(38%) sepia(29%) saturate(730%) hue-rotate(118deg)
+      brightness(58%) contrast(94%);
+  }
+  &-links {
+    display: flex;
+    justify-content: center;
+    gap: rem(57);
+    @include responsive(xs-mobile) {
+      gap: rem(20);
+    }
+    margin: rem(40) 0 rem(88) 0;
+    & a {
+      text-decoration: none;
+      @include font(18, 25, 600, $cyan-footer);
+    }
+  }
+  &-socials {
+    display: flex;
+    justify-content: center;
+    gap: rem(28);
+  }
+}
