@@ -50,7 +50,7 @@
       background: $white;
       transform: skewY(-45deg);
       height: rem(40);
-      width: rem(50);
+      width: rem(40);
       top: 0;
       right: 0;
     }
@@ -202,6 +202,10 @@
     height: rem(600);
     object-position: center center;
     object-fit: cover;
+    @include responsive(min-tablet) {
+      width: 50%;
+      height: auto;
+    }
   }
   &-title {
     font-family: 'Fraunces', serif;
@@ -257,6 +261,9 @@
 .gallary {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  @include responsive(min-desktop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
   & > img {
     aspect-ratio: 1;
   }
@@ -293,4 +300,37 @@
     justify-content: center;
     gap: rem(28);
   }
+}
+.grid {
+  @include responsive(min-tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      'egg-content egg'
+      'cup cup-content'
+      'cherry oranges'
+      'testimonials testimonials';
+  }
+}
+
+.grid-1 {
+  grid-area: egg;
+}
+.grid-2 {
+  grid-area: egg-content;
+}
+.grid-3 {
+  grid-area: cup;
+}
+.grid-4 {
+  grid-area: cup-content;
+}
+.grid-5 {
+  grid-area: cherry;
+}
+.grid-6 {
+  grid-area: oranges;
+}
+.grid-7 {
+  grid-area: testimonials;
 }

@@ -166,7 +166,7 @@ html {
   -webkit-transform: skewY(-45deg);
           transform: skewY(-45deg);
   height: 2.5rem;
-  width: 3.125rem;
+  width: 2.5rem;
   top: 0;
   right: 0;
 }
@@ -369,6 +369,13 @@ html {
      object-fit: cover;
 }
 
+@media only screen and (min-width: 768px) {
+  .section2-img {
+    width: 50%;
+    height: auto;
+  }
+}
+
 .section2-title {
   font-family: 'Fraunces', serif;
   font-size: 1.75rem;
@@ -450,6 +457,13 @@ html {
       grid-template-columns: repeat(2, 1fr);
 }
 
+@media only screen and (min-width: 1024px) {
+  .gallary {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .gallary > img {
   aspect-ratio: 1;
 }
@@ -502,5 +516,43 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 1.75rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 'egg-content egg' 'cup cup-content' 'cherry oranges' 'testimonials testimonials';
+  }
+}
+
+.grid-1 {
+  grid-area: egg;
+}
+
+.grid-2 {
+  grid-area: egg-content;
+}
+
+.grid-3 {
+  grid-area: cup;
+}
+
+.grid-4 {
+  grid-area: cup-content;
+}
+
+.grid-5 {
+  grid-area: cherry;
+}
+
+.grid-6 {
+  grid-area: oranges;
+}
+
+.grid-7 {
+  grid-area: testimonials;
 }
 /*# sourceMappingURL=style.css.map */
