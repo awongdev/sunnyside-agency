@@ -110,11 +110,12 @@
     }
     @include responsive(min-desktop) {
       margin: 0;
-      background-color: rgba(255, 255, 255, 0.25);
-      color: $white;
+      background-color: $white;
+      color: #000;
       &:hover {
-        color: #000;
-        background-color: $white;
+        color: $white;
+        background-color: rgba(255, 255, 255, 0.25);
+        opacity: 1;
       }
     }
   }
@@ -281,9 +282,22 @@
 .testimonial {
   padding: rem(64) rem(24) rem(86) rem(24);
   text-align: center;
+  @include responsive(min-desktop-lg) {
+    padding: rem(160) rem(165);
+  }
+
+  &-container {
+    @include responsive(min-desktop-lg) {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
 
   &-section {
     margin: rem(64) 0;
+    @include responsive(min-desktop-lg) {
+      margin: rem(81) 0;
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -302,11 +316,16 @@
     border-radius: 50%;
     display: block;
     margin: 0 auto rem(32) auto;
+    @include responsive(min-desktop-lg) {
+      margin-bottom: rem(58);
+    }
   }
 
   &-content {
     @include font(18, 32, 600, $dark-gray-blue);
     letter-spacing: rem(-0.128571);
+    max-width: rem(350);
+    margin: 0 auto;
   }
 
   &-name {
@@ -314,6 +333,9 @@
     @include font(18, 22, 900, $very-dark-blue);
     letter-spacing: rem(-0.128571);
     margin: rem(32) 0 rem(9) 0;
+    @include responsive(min-desktop-lg) {
+      margin-top: rem(69);
+    }
   }
 
   &-position {
@@ -365,6 +387,10 @@
     & a {
       text-decoration: none;
       @include font(18, 25, 600, $cyan-footer);
+      transition: all 0.25s ease-in-out;
+      &:hover {
+        color: hsl(168, 47%, 46%);
+      }
     }
   }
 
@@ -374,6 +400,7 @@
     gap: rem(28);
   }
 }
+
 .grid {
   @include responsive(min-tablet) {
     display: grid;

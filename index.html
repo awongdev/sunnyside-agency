@@ -28,10 +28,10 @@
             <img class="nav-logo" src="images/logo.svg" alt="Sunnyside logo" />
           </a>
           <ul data-visible="false" class="nav-menu">
-            <li class="nav-link"><a href="#about">About</a></li>
-            <li class="nav-link"><a href="#services">Services</a></li>
-            <li class="nav-link"><a href="#projects">Projects</a></li>
-            <button class="nav-btn">Contact</button>
+            <li class="nav-link menu-item"><a href="#about">About</a></li>
+            <li class="nav-link menu-item"><a href="#services">Services</a></li>
+            <li class="nav-link menu-item"><a href="#projects">Projects</a></li>
+            <button class="nav-btn menu-item">Contact</button>
           </ul>
           <img
             data-active="false"
@@ -125,47 +125,49 @@
 
       <article class="testimonial grid-7" id="projects">
         <h3 class="testimonial-title">Client testimonials</h3>
-        <section class="testimonial-section">
-          <img
-            class="testimonial-img"
-            src="images/image-emily.jpg"
-            alt="Image of Emily"
-          />
-          <p class="testimonial-content">
-            We put our trust in Sunnyside and they delivered, making sure our
-            needs were met and deadlines were always hit.
-          </p>
-          <p class="testimonial-name">Emily R.</p>
-          <p class="testimonial-position">Marketing Director</p>
-        </section>
+        <div class="testimonial-container">
+          <section class="testimonial-section">
+            <img
+              class="testimonial-img"
+              src="images/image-emily.jpg"
+              alt="Image of Emily"
+            />
+            <p class="testimonial-content">
+              We put our trust in Sunnyside and they delivered, making sure our
+              needs were met and deadlines were always hit.
+            </p>
+            <p class="testimonial-name">Emily R.</p>
+            <p class="testimonial-position">Marketing Director</p>
+          </section>
 
-        <section class="testimonial-section">
-          <img
-            class="testimonial-img"
-            src="images/image-thomas.jpg"
-            alt="Image of Thomoas"
-          />
-          <p class="testimonial-content">
-            Sunnyside’s enthusiasm coupled with their keen interest in our
-            brand’s success made it a satisfying and enjoyable experience.
-          </p>
-          <p class="testimonial-name">Thomas S.</p>
-          <p class="testimonial-position">Chief Operating Officer</p>
-        </section>
+          <section class="testimonial-section">
+            <img
+              class="testimonial-img"
+              src="images/image-thomas.jpg"
+              alt="Image of Thomoas"
+            />
+            <p class="testimonial-content">
+              Sunnyside’s enthusiasm coupled with their keen interest in our
+              brand’s success made it a satisfying and enjoyable experience.
+            </p>
+            <p class="testimonial-name">Thomas S.</p>
+            <p class="testimonial-position">Chief Operating Officer</p>
+          </section>
 
-        <section class="testimonial-section">
-          <img
-            class="testimonial-img"
-            src="images/image-jennie.jpg"
-            alt="Image of Jennie"
-          />
-          <p class="testimonial-content">
-            Incredible end result! Our sales increased over 400% when we worked
-            with Sunnyside. Highly recommended!
-          </p>
-          <p class="testimonial-name">Jennie F.</p>
-          <p class="testimonial-position">Business Owner</p>
-        </section>
+          <section class="testimonial-section">
+            <img
+              class="testimonial-img"
+              src="images/image-jennie.jpg"
+              alt="Image of Jennie"
+            />
+            <p class="testimonial-content">
+              Incredible end result! Our sales increased over 400% when we
+              worked with Sunnyside. Highly recommended!
+            </p>
+            <p class="testimonial-name">Jennie F.</p>
+            <p class="testimonial-position">Business Owner</p>
+          </section>
+        </div>
       </article>
     </main>
 
@@ -188,7 +190,9 @@
       />
     </article>
     <footer class="footer">
-      <img class="footer-logo" src="images/logo.svg" alt="Sunnyside logo" />
+      <a href="#">
+        <img class="footer-logo" src="images/logo.svg" alt="Sunnyside logo" />
+      </a>
       <ul class="footer-links">
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>

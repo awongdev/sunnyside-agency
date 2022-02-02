@@ -34,4 +34,9 @@
       @content;
     }
   }
+  @if $breakpoint == min-desktop-lg {
+    @media only screen and (min-width: 1440px) {
+      @content;
+    }
+  }
 }

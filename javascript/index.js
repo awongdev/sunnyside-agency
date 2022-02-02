@@ -12,5 +12,9 @@ btn.addEventListener('click', () => {
       btn.setAttribute('data-active', 'false'));
 });
 
-// Prevent transition on load
-document.body.classList.remove('js-stop-transition');
+document.querySelectorAll('.menu-item').forEach((e) =>
+  e.addEventListener('click', () => {
+    menu.setAttribute('data-visible', 'false');
+    btn.setAttribute('data-active', 'false');
+  }),
+);

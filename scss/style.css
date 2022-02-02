@@ -254,12 +254,13 @@ html {
 @media only screen and (min-width: 1024px) {
   .nav-btn {
     margin: 0;
-    background-color: rgba(255, 255, 255, 0.25);
-    color: white;
+    background-color: white;
+    color: #000;
   }
   .nav-btn:hover {
-    color: #000;
-    background-color: white;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.25);
+    opacity: 1;
   }
 }
 
@@ -472,8 +473,31 @@ html {
   text-align: center;
 }
 
+@media only screen and (min-width: 1440px) {
+  .testimonial {
+    padding: 10rem 10.3125rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .testimonial-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
 .testimonial-section {
   margin: 4rem 0;
+}
+
+@media only screen and (min-width: 1440px) {
+  .testimonial-section {
+    margin: 5.0625rem 0;
+  }
 }
 
 .testimonial-section:last-child {
@@ -498,12 +522,20 @@ html {
   margin: 0 auto 2rem auto;
 }
 
+@media only screen and (min-width: 1440px) {
+  .testimonial-img {
+    margin-bottom: 3.625rem;
+  }
+}
+
 .testimonial-content {
   font-size: 1.125rem;
   line-height: 2rem;
   font-weight: 600;
   color: #5a636c;
   letter-spacing: -0.00804rem;
+  max-width: 21.875rem;
+  margin: 0 auto;
 }
 
 .testimonial-name {
@@ -514,6 +546,12 @@ html {
   color: #23303e;
   letter-spacing: -0.00804rem;
   margin: 2rem 0 0.5625rem 0;
+}
+
+@media only screen and (min-width: 1440px) {
+  .testimonial-name {
+    margin-top: 4.3125rem;
+  }
 }
 
 .testimonial-position {
@@ -588,6 +626,12 @@ html {
   line-height: 1.5625rem;
   font-weight: 600;
   color: #458c7e;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: #3eac96;
 }
 
 .footer-socials {
