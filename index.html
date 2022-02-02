@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,11 +24,13 @@
     <header class="header-image">
       <nav>
         <div class="nav">
-          <img class="nav-logo" src="images/logo.svg" alt="Sunnyside logo" />
+          <a href="#">
+            <img class="nav-logo" src="images/logo.svg" alt="Sunnyside logo" />
+          </a>
           <ul data-visible="false" class="nav-menu">
-            <li class="nav-item"><a href="#about">About</a></li>
-            <li class="nav-item"><a href="#services">Services</a></li>
-            <li class="nav-item"><a href="#projects">Projects</a></li>
+            <li class="nav-link"><a href="#about">About</a></li>
+            <li class="nav-link"><a href="#services">Services</a></li>
+            <li class="nav-link"><a href="#projects">Projects</a></li>
             <button class="nav-btn">Contact</button>
           </ul>
           <img
@@ -91,15 +92,15 @@
         </div>
       </article>
 
-      <article id="services" class="grid-5">
+      <article class="section2" id="services" class="grid-5">
         <img
           class="section2-img"
           src="images/desktop/image-graphic-design.jpg"
           alt="Image of cherries"
         />
-        <div class="section2">
+        <div class="section2-content">
           <h3 class="section2-title">Graphic design</h3>
-          <p class="section2-content">
+          <p class="section2-text">
             Great design makes you memorable. We deliver artwork that
             underscores your brand message and captures potential clients’
             attention.
@@ -107,15 +108,15 @@
         </div>
       </article>
 
-      <article class="grid-6">
+      <article class="section2" class="grid-6">
         <img
           class="section2-img"
           src="images/desktop/image-photography.jpg"
           alt="Image of an orange"
         />
-        <div class="section2">
+        <div class="section2-content">
           <h3 class="section2-title">Photography</h3>
-          <p class="section2-content">
+          <p class="section2-text">
             Increase your credibility by getting the most stunning, high-quality
             photos that improve your business image.
           </p>
