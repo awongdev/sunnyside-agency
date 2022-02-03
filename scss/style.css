@@ -140,6 +140,7 @@ html {
 }
 
 .nav-menu {
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,7 +152,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  top: 4.875rem;
+  top: 5.875rem;
   left: 1.5rem;
   right: 1.5rem;
   background-color: white;
@@ -180,11 +181,24 @@ html {
             flex-direction: row;
     background-color: transparent;
     inset: 0 0 0 0;
-    margin: 0;
     gap: 2.9375rem;
+    margin: 0;
   }
   .nav-menu::before {
     content: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2.9375rem;
   }
 }
 
@@ -194,7 +208,7 @@ html {
 }
 
 .nav-link:first-child {
-  padding-top: 2.4375rem;
+  padding-top: 1.4375rem;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -241,7 +255,7 @@ html {
   color: #000;
   font-family: 'Fraunces', serif;
   text-transform: uppercase;
-  margin: 1rem 0 2.4375rem 0;
+  margin: 0 0 2.4375rem 0;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
@@ -279,6 +293,15 @@ html {
 @media only screen and (max-width: 320px) {
   .header-title {
     font-size: 1.875rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header-title {
+    font-size: 3.5rem;
+    line-height: 4.3125rem;
+    font-weight: 900;
+    color: white;
   }
 }
 
@@ -343,6 +366,10 @@ html {
 @media only screen and (min-width: 1024px) {
   .section1-title {
     text-align: left;
+    font-size: 2.5rem;
+    line-height: 3.0625rem;
+    font-weight: 900;
+    color: #23303e;
   }
 }
 
@@ -496,7 +523,7 @@ html {
 
 @media only screen and (min-width: 1440px) {
   .testimonial-section {
-    margin: 5.0625rem 0;
+    margin: 5.0625rem 0 0 0;
   }
 }
 
@@ -512,6 +539,16 @@ html {
   color: #a7abae;
   letter-spacing: 0.25rem;
   text-transform: uppercase;
+}
+
+@media only screen and (min-width: 1440px) {
+  .testimonial-title {
+    font-size: 1.25rem;
+    line-height: 1.5625rem;
+    font-weight: 900;
+    color: #a7abae;
+    letter-spacing: -0.01786rem;
+  }
 }
 
 .testimonial-img {
@@ -631,7 +668,7 @@ html {
 }
 
 .footer-links a:hover {
-  color: #3eac96;
+  color: white;
 }
 
 .footer-socials {
