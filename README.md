@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://acedub.github.io/sunnyside-agency/](https://acedub.github.io/sunnyside-agency/)
+- Live Site URL: [https://awongdev.github.io/sunnyside-agency/](https://awongdev.github.io/sunnyside-agency/)
 
 ## My process
 
@@ -43,4 +43,4 @@ Users should be able to:
 ## Author
 
 - Frontend Mentor - [@AceDub](https://www.frontendmentor.io/profile/acedub)
-- GitHub - [@AceDub](https://github.com/AceDub)
+- GitHub - [@awongdev](https://github.com/awongdev)
